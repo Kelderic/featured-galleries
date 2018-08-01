@@ -20,20 +20,35 @@ define( 'FG_PLUGIN_VERSION', '2.0.0' );
 
 define( 'FG_PLUGIN_FILE', __FILE__ );
 
+if ( version_compare( PHP_VERSION, '5.4', '<' ) ) {
 
+	add_action('admin_notices', 'my_plugin_notice');
 
-/***********************************************************************/
-/**********************  INCLUDE REQUIRED FILES  ***********************/
-/***********************************************************************/
+    function my_plugin_notice(){      
 
-require_once( plugin_dir_path(FG_PLUGIN_FILE) . 'includes/controller.php' );
+		echo '
+			<div class="error below-h2">
+				<p>
+				 ' . sprintf( 'Featured Galleries requires PHP version 5.4 or greater. You are currently running version: %s. Please deactivate Featured Galleries or upgrade your PHP.', PHP_VERSION ) . '
+				</p>
+			</div>
+		';
+    }
 
-require_once( plugin_dir_path(FG_PLUGIN_FILE) . 'includes/public-functions.php' );
+} else {
 
+	/***********************************************************************/
+	/**********************  INCLUDE REQUIRED FILES  ***********************/
+	/***********************************************************************/
 
+	require_once( plugin_dir_path(FG_PLUGIN_FILE) . 'includes/controller.php' );
 
-/***********************************************************************/
-/*****************************  INITIATE  ******************************/
-/***********************************************************************/
+	require_once( plugin_dir_path(FG_PLUGIN_FILE) . 'includes/public-functions.php' );
 
-new FG_Controller();
+	/***********************************************************************/
+	/*****************************  INITIATE  ******************************/
+	/***********************************************************************/
+
+	new FG_Controller();
+
+}
