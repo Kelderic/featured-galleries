@@ -1,0 +1,4 @@
+{
+	"build": "../../websites/wordpress-dev/wp-content/plugins/featured-galleries",
+	"dist" : "dist"
+}
