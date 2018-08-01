@@ -85,7 +85,7 @@
 
 				self.el.modal.classList.add('fg-media-frame');
 
-				if ( ! fgInfoFromPHP.showDetailSidebar ) {
+				if ( fgInfoFromPHP.showDetailSidebar !== '1' && fgInfoFromPHP.showDetailSidebar !== true ) {
 					self.el.modal.classList.add('no-details-sidebar');
 				}
 
