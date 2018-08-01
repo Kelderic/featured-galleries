@@ -29,37 +29,9 @@
 	background-position: -95px 5px;
 }
 
-.media-frame-content {
-	border-bottom: 1px solid rgb(221, 221, 221);
-}
-
-.media-frame-toolbar, .media-menu {
-	border: 0;
-	box-shadow: none;
-}
-
-/* Special CSS to the Select and Remove Buttons */
-
-@media screen and (min-width: 783px) {
-	#featuredgallerydiv button {
-		height: 32px !important;
-		padding-top:1px !important;
-	}
-}
-
-#featuredgallerydiv button {
-	margin-top:5px !important;
-}
-
-#featuredgallerydiv button#fg_removeall:before {
-	content:"\f153";
-	font-family:"dashicons";
-	position:relative;
-	top:2px;
-	left:-1px;
-}
-
-/* CSS to the Preview List */
+/**********************************************************************************************/
+/**** STYLES FOR THE THUMBNAIL PREVIEW ********************************************************/
+/**********************************************************************************************/
 
 #featuredgallerydiv ul {
 	margin:0;
