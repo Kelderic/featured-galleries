@@ -1,19 +1,19 @@
 <?php
 
-function get_post_gallery_ids( $id = null, $maxImages = -1, $method = 'array' ) {
+function get_post_gallery_ids( $postID = null, $maxImages = -1, $method = 'array' ) {
 
 	global $post;
 
 	// CHECK TO SEE IF AN ID HAS BEEN PASSED. IF NOT, LOAD THE ID FROM $POST, IF POSSIBLE
 
-	if ( $id == null ) {
+	if ( $postID == null ) {
 
 		// IF NO ID HAS BEEN PASSED, CHECK TO SEE IF WE ARE IN THE LOOP AND HAVE A $post. IF
 		// WE DO, THEN LOAD THE POST ID FROM THE CURRENT POST. IF NOT, RETURN AN ERROR.
 
 		if ( $post !== null ) {
 
-			$id = $post->ID;
+			$postID = $post->ID;
 
 		} else {
 
@@ -26,13 +26,13 @@ function get_post_gallery_ids( $id = null, $maxImages = -1, $method = 'array' ) 
 	// CHECK TO SEE IF WE ARE IN A PREVIEW. IF SO, LOAD THE TEMP METADATA. IF NOT, LOAD THE
 	// PERM METADATA
 
-	if ( is_preview( $id ) ) {
+	if ( is_preview( $postID ) ) {
 
-		$galleryString = get_post_meta( $id, 'fg_temp_metadata', 1 );
+		$galleryString = get_post_meta( $postID, 'fg_temp_metadata', 1 );
 
 	} else {
 
-		$galleryString = get_post_meta( $id, 'fg_perm_metadata', 1 );
+		$galleryString = get_post_meta( $postID, 'fg_perm_metadata', 1 );
 
 	}
 
