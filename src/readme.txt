@@ -168,6 +168,10 @@ Why yes you can! You don't even have to edit the plugin to do so. There are deta
 
 == Changelog ==
 
+= 2.0.1 =
+
+* Bugfix: Don't run plugin logic on old versions of PHP that are incompatible.
+
 = 2.0.0 =
 
 * Under the Hood: Complete rewrite top to bottom of all PHP and Javascript.
