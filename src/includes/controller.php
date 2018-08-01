@@ -169,9 +169,9 @@ class FG_Controller {
 			<input type="text" class="hide-if-js" name="fg_perm_metadata" id="fg_perm_metadata" value="' . $galleryString . '" data-post_id="' . $post->ID . '" />
 			<p class="howto hide-if-js">Enable Javascript to use drag and drop Media Manager. Alternatively, type in the IDs of the images that you want as part of the Featured Gallery in the above text box, separating with commas.</p>
 
-			<ul id="fg-post-gallery" class="hide-if-no-js">' .$galleryHTML . '</ul>
+			<ul id="fg-post-gallery" class="hide-if-no-js">' . $galleryHTML . '</ul>
 
-			<button type="button" class="button hide-if-no-js" id="fg_removeall"' .$hideIfNoSelection . '>' . __( 'Remove All', 'featured-gallery' ) . '</button>
+			<button type="button" class="button hide-if-no-js" id="fg_removeall"' . $hideIfNoSelection . '>' . __( 'Remove All', 'featured-gallery' ) . '</button>
 			<button type="button" class="button hide-if-no-js" id="fg_select">' . $selectButtonText . '</button>
 
 			<div style="clear:both;"></div>
