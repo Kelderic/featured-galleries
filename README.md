@@ -20,7 +20,7 @@ Have you ever added a Featured Image to a post and thought to yourself, 'I wish 
 
 **Note**: This is not a plugin which will add galleries to your website. This is for theme developers. It handles the backend interface for creating featured galleries, and storing them. You will still need to build a gallery on your page templates.
 
-### --Instructions to Integrate Into Themes--
+### Instructions to Integrate Into Themes
 
 Just like with Featured Images themes will need to call a Featured Gallery in any template file where the Featured Gallery should appear. I've tried to make this as intuitive as possible.
 
@@ -51,7 +51,7 @@ Just like WordPress comes with `get_post_thumbnail_id()` built-in, you can use `
   * 'string' will cause the function to return the image IDs as a comma delimited string.
 
 
-### --Examples--
+### Examples
 
 **Example 1:** Set inside the Loop. This returns all images in the Featured Gallery, as an array, then loops through to display each using an HTML `<img>` tag.
 
