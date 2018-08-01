@@ -1,5 +1,7 @@
 # Featured Galleries
 
+![Banner](https://ps.w.org/featured-galleries/assets/banner-1544x500.png)
+
 **Hello Theme Developers!**
 
 Have you ever added a Featured Image to a post and thought to yourself, 'I wish I could add more than one image this way'? Well, now you can. "Featured Galleries" mirrors the Featured Images functionality of WordPress. The only difference is that posts get an entire gallery rather than just a single image. These galleries behave almost exactly like Featured Images, and make use of  WordPress's built in Media Manager. Users can select images, define the order, and save the gallery, all through a simple drag-n-drop interface.
