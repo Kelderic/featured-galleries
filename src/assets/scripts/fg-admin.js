@@ -117,6 +117,18 @@
 
 			});
 
+			// SPECIFY ACTION FOR THE 'close' ACTION
+
+			self.frame.on('close', function() {
+
+				// RESET THE MAIN BUTTON TEXT
+
+				wp.media.view.l10n.createNewGallery = l10nOriginal.createNewGallery;
+				wp.media.view.l10n.updateGallery = l10nOriginal.updateGallery;
+				wp.media.view.l10n.insertGallery = l10nOriginal.insertGallery;
+
+			});
+
 			// SPECIFY ACTION FOR THE 'update' ACTION. THIS HAPPENS WHEN
 			// AN IMAGE IS SELECTED
 
@@ -144,16 +156,6 @@
 					update_temp_metadata( self.el, self.postID );
 
 				}
-
-			});
-
-			self.frame.on('close', function() {
-
-				// RESET THE MAIN BUTTON TEXT
-
-				wp.media.view.l10n.createNewGallery = l10nOriginal.createNewGallery;
-				wp.media.view.l10n.updateGallery = l10nOriginal.updateGallery;
-				wp.media.view.l10n.insertGallery = l10nOriginal.insertGallery;
 
 			});
 
