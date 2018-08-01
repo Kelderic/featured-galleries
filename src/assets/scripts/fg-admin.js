@@ -83,7 +83,11 @@
 
 			self.frame.on('ready', function() {
 
-				self.el.modal.classList.add('no-sidebar');
+				self.el.modal.classList.add('fg-media-frame');
+
+				if ( ! fgInfoFromPHP.showDetailSidebar ) {
+					self.el.modal.classList.add('no-details-sidebar');
+				}
 
 				fix_back_button();
 

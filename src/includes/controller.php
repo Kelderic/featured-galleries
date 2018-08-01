@@ -64,19 +64,14 @@ class FG_Controller {
 				// VARIABLE CALLED fgInfoFromPHP, WHICH IS AN OBJECT WITH A KEY OF 'wpAdminAjaxURL' WHICH WILL HAVE THE
 				// CORRECT VALUE
 
-				wp_localize_script( 'fg-script-admin', 'fgInfoFromPHP', [ 'wpAdminAjaxURL' => admin_url('admin-ajax.php') ] );
+				wp_localize_script( 'fg-script-admin', 'fgInfoFromPHP', [
+					'wpAdminAjaxURL' => admin_url('admin-ajax.php'),
+					'showDetailSidebar' => apply_filters( 'fg_show_sidebar', false )
+				]);
 
 				// ENQUEUE OUT STYLESHEETS
 
 				wp_enqueue_style( 'fg-style-admin', plugin_dir_url( FG_PLUGIN_FILE ) . 'assets/stylesheets/fg-admin.css', [], FG_PLUGIN_VERSION );
-
-				$showSidebar = apply_filters( 'fg_show_sidebar', false );
-
-				if ( $showSidebar = false ) {
-
-					wp_enqueue_style( 'fg-style-admin-hidesidebar', plugin_dir_url( FG_PLUGIN_FILE ) . 'assets/stylesheets/fg-admin-hidesidebar.css', [], FG_PLUGIN_VERSION );
-
-				}
 
 			}
 
