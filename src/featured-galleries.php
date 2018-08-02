@@ -5,7 +5,7 @@
  * Description:       WordPress ships with a Featured Image functionality. This adds a very similar functionality, but allows for full featured galleries with multiple images.
  * Version:           2.1.0
  * Author:            Andy Mercer
- * Author URI:        http://www.andymercer.net
+ * Author URI:        https://github.com/Kelderic/
  * Text Domain:       featured-galleries
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
