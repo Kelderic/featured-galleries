@@ -158,7 +158,7 @@
 					imageHTML += '<li><button type="button"></button><img id="' + id + '" src="' + url + '"></li>'
 				});
 
-				// IF WE HAVE ANY IMAGES, UPDATE THE METABOX
+				// IF WE HAVE ANY IMAGES, UPDATE THE METABOX AND TEMP METADATA
 
 				if ( imageIDs.length ) {
 
