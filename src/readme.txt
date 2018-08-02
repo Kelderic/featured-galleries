@@ -168,6 +168,12 @@ Why yes you can! You don't even have to edit the plugin to do so. There are deta
 
 == Changelog ==
 
+= 2.1.0 =
+
+* Enhancement: Switched multi-select type from Library to Gallery. You no longer have to hold the SHIFT or CONTROL/COMMAND keys to select multiple items. To restore the old behavior, use the new `fg_use_legacy_selection` filter. See docs for details.
+* Bugfix: Fix broken details sidebar hiding filter. The details sidebar is now properly hidden again by default, and can be shown be using the `fg_show_sidebar` filter.
+* Under the Hood: Complete rewrite of all CSS styles. FG styles are now isolated and don't affect other media manager modals.
+
 = 2.0.1 =
 
 * Bugfix: Don't run plugin logic on old versions of PHP that are incompatible.
