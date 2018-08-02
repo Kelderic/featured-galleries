@@ -31,11 +31,7 @@
 
 			// STORE ORIGINAL BUTTON VALUES
 
-			l10nOriginal = {
-				createNewGallery: wp.media.view.l10n.createNewGallery,
-				updateGallery: wp.media.view.l10n.updateGallery,
-				insertGallery: wp.media.view.l10n.insertGallery
-			};
+			l10nOriginal = wp.media.view.l10n;
 
 			// IF EITHER BUTTON DOESN'T EXIST, EXIT GRACEFULLY
 
@@ -127,9 +123,7 @@
 
 				// RESET THE MAIN BUTTON TEXT
 
-				wp.media.view.l10n.createNewGallery = l10nOriginal.createNewGallery;
-				wp.media.view.l10n.updateGallery = l10nOriginal.updateGallery;
-				wp.media.view.l10n.insertGallery = l10nOriginal.insertGallery;
+				wp.media.view.l10n = l10nOriginal;
 
 			});
 
