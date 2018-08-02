@@ -43,6 +43,12 @@
 				self.flags.showDetailSidebar = false;
 			}
 
+			if ( fgInfoFromPHP.useLegacySelection === '1' && fgInfoFromPHP.useLegacySelection === true ) {
+				self.flags.useLegacySelection = true;
+			} else {
+				self.flags.useLegacySelection = false;
+			}
+
 			// IF EITHER BUTTON DOESN'T EXIST, EXIT GRACEFULLY
 
 			if ( ( self.el.buttonSelect == null ) || ( self.el.buttonRemove == null ) ) {
@@ -74,7 +80,7 @@
 					toolbar:    'main-gallery',
 					filterable: 'uploaded',
 					library:    wp.media.query( self.frame.options.library ),
-					multiple:   true,
+					multiple:   self.flags.useLegacySelection ? true : 'add',
 					editable:   false,
 					displaySettings: false,
 					displayUserSettings: false
