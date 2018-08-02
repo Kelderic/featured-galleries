@@ -120,7 +120,7 @@ That would add Featured Galleries to the custom post type with the slug of 'cust
     }
     add_filter('fg_post_types', 'add_featured_galleries_to_ctp' );
 
-= Show the Sidebar In Media Manager =
+= Show the Details Sidebar In Media Manager =
 
 By default, the sidebar is hidden in the media manager/uploader popup. However, if you'd like it to be shown, there is an easy filter that you can add to your functions.php file. Example:
 
