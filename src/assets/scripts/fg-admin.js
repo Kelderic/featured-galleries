@@ -37,10 +37,10 @@
 			// DETERMINE USER SELECTIONS VIA DATA PASSED BY wp_localize_script() PHP FUNCTION. WE HAVE
 			// TO CHECK TO '1' and TRUE, BECAUSE THERE IS A BUG IN THE WORDPRESS CODE.
 
-			if ( fgInfoFromPHP.showDetailSidebar === '1' || fgInfoFromPHP.showDetailSidebar === true ) {
-				self.flags.showDetailSidebar = true;
+			if ( fgInfoFromPHP.showDetailsSidebar === '1' || fgInfoFromPHP.showDetailsSidebar === true ) {
+				self.flags.showDetailsSidebar = true;
 			} else {
-				self.flags.showDetailSidebar = false;
+				self.flags.showDetailsSidebar = false;
 			}
 
 			if ( fgInfoFromPHP.useLegacySelection === '1' && fgInfoFromPHP.useLegacySelection === true ) {
@@ -97,7 +97,7 @@
 
 				self.el.modal.classList.add('fg-media-frame');
 
-				if ( ! self.flags.showDetailSidebar ) {
+				if ( ! self.flags.showDetailsSidebar ) {
 					self.el.modal.classList.add('no-details-sidebar');
 				}
 
