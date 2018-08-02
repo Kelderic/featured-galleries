@@ -207,12 +207,16 @@
 
 			self.el.buttonRemove.addEventListener('click', function(event){
 
-				update_metabox({
-					HTMLPreview: '',
-					permMetadata: ''
-				}, self.el);
+				if (confirm('Are you sure you want to remove all images?')) {
 
-				update_temp_metadata( self.el, self.postID );
+					update_metabox({
+						HTMLPreview: '',
+						permMetadata: ''
+					}, self.el);
+
+					update_temp_metadata( self.el, self.postID );
+
+				}
 
 			});
 
