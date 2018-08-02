@@ -66,7 +66,7 @@ class FG_Controller {
 
 				wp_localize_script( 'fg-script-admin', 'fgInfoFromPHP', [
 					'wpAdminAjaxURL' => admin_url('admin-ajax.php'),
-					'showDetailsSidebar' => apply_filters( 'fg_show_sidebar', false )
+					'showDetailsSidebar' => apply_filters( 'fg_show_sidebar', false ),
 					'useLegacySelection' => apply_filters( 'fg_use_legacy_selection', false )
 				]);
 
