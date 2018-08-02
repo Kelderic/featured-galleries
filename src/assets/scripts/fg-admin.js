@@ -18,6 +18,7 @@
 
 			// SETUP VARIABLES FROM USER-DEFINED PARAMETERS
 
+			self.flags = {};
 			self.frame = null;
 			self.el = {
 				buttonSelect: document.querySelector('#fg_select'),
@@ -32,6 +33,15 @@
 			// STORE ORIGINAL BUTTON VALUES
 
 			l10nOriginal = wp.media.view.l10n;
+
+			// DETERMINE USER SELECTIONS VIA DATA PASSED BY wp_localize_script() PHP FUNCTION. WE HAVE
+			// TO CHECK TO '1' and TRUE, BECAUSE THERE IS A BUG IN THE WORDPRESS CODE.
+
+			if ( fgInfoFromPHP.showDetailSidebar === '1' || fgInfoFromPHP.showDetailSidebar === true ) {
+				self.flags.showDetailSidebar = true;
+			} else {
+				self.flags.showDetailSidebar = false;
+			}
 
 			// IF EITHER BUTTON DOESN'T EXIST, EXIT GRACEFULLY
 
@@ -81,7 +91,7 @@
 
 				self.el.modal.classList.add('fg-media-frame');
 
-				if ( fgInfoFromPHP.showDetailSidebar !== '1' && fgInfoFromPHP.showDetailSidebar !== true ) {
+				if ( ! self.flags.showDetailSidebar ) {
 					self.el.modal.classList.add('no-details-sidebar');
 				}
 
