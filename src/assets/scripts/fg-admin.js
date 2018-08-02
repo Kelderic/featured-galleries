@@ -140,15 +140,25 @@
 
 				var imageIDs = [];
 				var imageHTML = '';
+				var id, url;
+
+				// LOOP THROUGH SELECTION
 
 				self.frame.state().get('library').each(function(selectedImage) {
+
+					// ADD IMAGE ID TO ARRAY
+
 					imageIDs.push(selectedImage.attributes.id);
-					if ( 'thumbnail' in selectedImage.attributes.sizes ) {
-						imageHTML += '<li><button type="button"></button><img id="' + selectedImage.attributes.id + '" src="' + selectedImage.attributes.sizes.thumbnail.url + '"></li>';
-					} else {
-						imageHTML += '<li><button type="button"></button><img id="' + selectedImage.attributes.id + '" src="' + selectedImage.attributes.sizes.full.url + '"></li>';
-					}
+
+					// BUILD PREVIEW HTML AND ADD TO STRING
+
+					url = 'thumbnail' in selectedImage.attributes.sizes ? selectedImage.attributes.sizes.thumbnail.url :  selectedImage.attributes.url;
+					id = selectedImage.attributes.id;
+
+					imageHTML += '<li><button type="button"></button><img id="' + id + '" src="' + url + '"></li>'
 				});
+
+				// IF WE HAVE ANY IMAGES, UPDATE THE METABOX
 
 				if ( imageIDs.length ) {
 
