@@ -19,9 +19,11 @@ Have you ever added a Featured Image to a post and thought to yourself, "I wish 
 
 **Note**: This plugin DOES NOT HANDLE THE FRONTEND HTML CREATION. That is left for themes to handle, to allow for maximum flexibility. Featured Galleries just handles the backend/admin interface for creating featured galleries and storing them as metadata. You will need to integrate this into your theme, or use a theme with prebuilt integration.
 
-= Instructions to Integrate Into Themes =
+= Quick Start Guide to Integrate Into Themes =
 
-I've tried to make this as intuitive as possible Themes can integrate Featured Galleries in the same way they integrate Featured Images. Inside any template file where the gallery should appear, the theme will call the [`get_post_gallery_ids()`](https://github.com/Kelderic/featured-galleries/wiki/get_post_gallery_ids) function. As long as it is used inside the loop, the function doesn't need any parameters. By default, it will return an array of image IDs.
+*For more information, see [GitHub Wiki](https://github.com/Kelderic/featured-galleries/wiki)*.
+
+I've tried to make this as intuitive as possible. Themes can integrate Featured Galleries in the same way they integrate Featured Images. Inside any template file where the gallery should appear, the theme will call the [`get_post_gallery_ids()`](https://github.com/Kelderic/featured-galleries/wiki/get_post_gallery_ids) function. As long as it is used inside the loop, the function doesn't need any parameters. By default, it will return an array of image IDs.
 
 = Example =
 
