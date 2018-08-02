@@ -43,7 +43,7 @@
 				self.flags.showDetailsSidebar = false;
 			}
 
-			if ( fgInfoFromPHP.useLegacySelection === '1' && fgInfoFromPHP.useLegacySelection === true ) {
+			if ( fgInfoFromPHP.useLegacySelection === '1' || fgInfoFromPHP.useLegacySelection === true ) {
 				self.flags.useLegacySelection = true;
 			} else {
 				self.flags.useLegacySelection = false;
