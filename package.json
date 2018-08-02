@@ -1,6 +1,6 @@
 {
   "name": "featured-galleries",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "devDependencies": {
     "autoprefixer": "^6.5.3",
     "cssnano": "^3.10.0",

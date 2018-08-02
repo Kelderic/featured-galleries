@@ -3,7 +3,7 @@
  * Plugin Name:       Featured Galleries
  * Plugin URI:        http://wordpress.org/plugins/featured-galleries/
  * Description:       WordPress ships with a Featured Image functionality. This adds a very similar functionality, but allows for full featured galleries with multiple images.
- * Version:           2.0.1
+ * Version:           2.1.0
  * Author:            Andy Mercer
  * Author URI:        http://www.andymercer.net
  * Text Domain:       featured-galleries
@@ -16,7 +16,7 @@
 /*************************  DEFINE CONSTANTS  **************************/
 /***********************************************************************/
 
-define( 'FG_PLUGIN_VERSION', '2.0.0' );
+define( 'FG_PLUGIN_VERSION', '2.1.0' );
 
 define( 'FG_PLUGIN_FILE', __FILE__ );
 
